@@ -237,9 +237,9 @@
           "name": "transform",
           "props": {
             "position": {
-              "x": -10.905769293712876,
-              "y": 11.575084625047051,
-              "z": -0.07603167932542565
+              "x": 0,
+              "y": 0,
+              "z": 0
             },
             "rotation": {
               "x": 0,
@@ -259,15 +259,42 @@
           "props": {}
         },
         {
-          "name": "spawn-point",
+          "name": "shadow",
           "props": {
-            "permissionedUsers": []
+            "cast": true,
+            "receive": true
+          }
+        },
+        {
+          "name": "gltf-model",
+          "props": {
+            "src": "__$project$__/ee-ethereal-village/assets/ethereal_village-transformed.glb",
+            "resource": null,
+            "generateBVH": true,
+            "avoidCameraOcclusion": false
+          }
+        },
+        {
+          "name": "envmap",
+          "props": {
+            "type": "None",
+            "envMapTextureType": "Equirectangular",
+            "envMapSourceColor": 4095,
+            "envMapSourceURL": "",
+            "envMapIntensity": 1
+          }
+        },
+        {
+          "name": "loop-animation",
+          "props": {
+            "activeClipIndex": -1,
+            "hasAvatarAnimations": false
           }
         }
       ],
       "parent": "d32b1c4e-d08e-4fb0-9107-4c88a281ee71",
       "index": 5,
-      "name": "spawn point"
+      "name": "village"
     }
   },
   "root": "d32b1c4e-d08e-4fb0-9107-4c88a281ee71"
