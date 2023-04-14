@@ -1,6 +1,20 @@
 {
   "version": 0,
-  "metadata": {},
+  "metadata": {
+    "postprocessing": {
+      "effects": {
+        "SMAAEffect": {
+          "isActive": false
+        },
+        "OutlineEffect": {
+          "isActive": false
+        },
+        "BloomEffect": {
+          "isActive": false
+        }
+      }
+    }
+  },
   "entities": {
     "d32b1c4e-d08e-4fb0-9107-4c88a281ee71": {
       "components": [
@@ -231,7 +245,7 @@
       "index": 3,
       "name": "directional light"
     },
-    "undefined": {
+    "54aa3d26-e262-442e-b236-7d118322bf7d": {
       "components": [
         {
           "name": "transform",
@@ -269,7 +283,9 @@
           "name": "gltf-model",
           "props": {
             "src": "__$project$__/ee-ethereal-village/assets/ethereal_village-transformed.glb",
-            "resource": null,
+            "resource": {
+              "src": "__$project$__/ee-ethereal-village/assets/ethereal_village-transformed.glb"
+            },
             "generateBVH": true,
             "avoidCameraOcclusion": false
           }
@@ -293,8 +309,121 @@
         }
       ],
       "parent": "d32b1c4e-d08e-4fb0-9107-4c88a281ee71",
-      "index": 5,
+      "index": 4,
       "name": "village"
+    },
+    "e8c74654-7ce9-4b82-a01b-7b06a2f71955": {
+      "components": [
+        {
+          "name": "transform",
+          "props": {
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        },
+        {
+          "name": "shadow",
+          "props": {
+            "cast": true,
+            "receive": true
+          }
+        },
+        {
+          "name": "gltf-model",
+          "props": {
+            "src": "__$project$__/ee-ethereal-village/assets/terrain-collision.glb",
+            "resource": {
+              "src": "__$project$__/ee-ethereal-village/assets/terrain-collision.glb"
+            },
+            "generateBVH": false,
+            "avoidCameraOcclusion": false
+          }
+        },
+        {
+          "name": "envmap",
+          "props": {
+            "type": "None",
+            "envMapTextureType": "Equirectangular",
+            "envMapSourceColor": 4095,
+            "envMapSourceURL": "",
+            "envMapIntensity": 1
+          }
+        },
+        {
+          "name": "loop-animation",
+          "props": {
+            "activeClipIndex": -1,
+            "hasAvatarAnimations": false
+          }
+        },
+        {
+          "name": "collider",
+          "props": {
+            "bodyType": 1,
+            "shapeType": 6,
+            "isTrigger": false,
+            "removeMesh": false,
+            "collisionLayer": 1,
+            "collisionMask": 7,
+            "restitution": 1
+          }
+        }
+      ],
+      "parent": "d32b1c4e-d08e-4fb0-9107-4c88a281ee71",
+      "index": 5,
+      "name": "terrain collider"
+    },
+    "b89f13e5-5264-40c5-bed0-585f42154c3b": {
+      "components": [
+        {
+          "name": "transform",
+          "props": {
+            "position": {
+              "x": 48.57933282347628,
+              "y": 10.47763705831213,
+              "z": 41.97470227822414
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0.9961946980917455,
+              "z": 0,
+              "w": -0.08715574274765854
+            },
+            "scale": {
+              "x": 0.9999999999999981,
+              "y": 1,
+              "z": 0.9999999999999981
+            }
+          }
+        },
+        {
+          "name": "visible",
+          "props": {}
+        },
+        {
+          "name": "spawn-point",
+          "props": {
+            "permissionedUsers": []
+          }
+        }
+      ],
+      "parent": "d32b1c4e-d08e-4fb0-9107-4c88a281ee71",
+      "index": 6,
+      "name": "New Spawn Point"
     }
   },
   "root": "d32b1c4e-d08e-4fb0-9107-4c88a281ee71"
