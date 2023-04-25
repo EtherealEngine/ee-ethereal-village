@@ -1,6 +1,5 @@
 {
   "version": 0,
-  "metadata": {},
   "entities": {
     "d32b1c4e-d08e-4fb0-9107-4c88a281ee71": {
       "components": [
@@ -52,6 +51,114 @@
             "refreshMode": "OnAwake",
             "envMapOrigin": "__$project$__/ee-ethereal-village/village.envmap.png",
             "boxProjection": true
+          }
+        },
+        {
+          "name": "render-settings",
+          "props": {
+            "csm": true,
+            "toneMapping": 1,
+            "toneMappingExposure": 0.8,
+            "shadowMapType": 2
+          }
+        },
+        {
+          "name": "postprocessing",
+          "props": {
+            "enabled": true,
+            "effects": {
+              "SMAAEffect": {
+                "isActive": true,
+                "blendFunction": 13,
+                "preset": 1,
+                "edgeDetectionMode": 2,
+                "predicationMode": 0
+              },
+              "OutlineEffect": {
+                "isActive": true,
+                "blendFunction": 16,
+                "patternTexture": null,
+                "edgeStrength": 1,
+                "pulseSpeed": 0,
+                "visibleEdgeColor": 16777215,
+                "hiddenEdgeColor": 16777215,
+                "resolutionScale": 0.5,
+                "width": -1,
+                "height": -1,
+                "kernelSize": 0,
+                "blur": false,
+                "xRay": true
+              },
+              "SSAOEffect": {
+                "isActive": false,
+                "blendFunction": 10,
+                "distanceScaling": true,
+                "depthAwareUpsampling": true,
+                "samples": 16,
+                "rings": 7,
+                "distanceThreshold": 0.125,
+                "distanceFalloff": 0.02,
+                "minRadiusScale": 1,
+                "bias": 0.25,
+                "radius": 0.01,
+                "intensity": 2,
+                "fade": 0.05
+              },
+              "DepthOfFieldEffect": {
+                "isActive": false,
+                "blendFunction": 13,
+                "focusDistance": 0.02,
+                "focalLength": 0.5,
+                "bokehScale": 1
+              },
+              "BloomEffect": {
+                "isActive": true,
+                "blendFunction": 16,
+                "kernelSize": 2,
+                "luminanceThreshold": 1,
+                "luminanceSmoothing": -0.24,
+                "intensity": 826.16
+              },
+              "ToneMappingEffect": {
+                "isActive": false,
+                "blendFunction": 13,
+                "adaptive": true,
+                "resolution": 512,
+                "middleGrey": 0.6,
+                "maxLuminance": 32,
+                "averageLuminance": 1,
+                "adaptationRate": 2
+              },
+              "BrightnessContrastEffect": {
+                "isActive": false,
+                "brightness": 0.05,
+                "contrast": 0.1
+              },
+              "HueSaturationEffect": {
+                "isActive": false,
+                "hue": 0,
+                "saturation": -0.15
+              },
+              "ColorDepthEffect": {
+                "isActive": false,
+                "bits": 16
+              },
+              "LinearTosRGBEffect": {
+                "isActive": false
+              }
+            }
+          }
+        },
+        {
+          "name": "fog",
+          "props": {
+            "type": "linear",
+            "color": "#FFFFFF",
+            "density": 0.0025,
+            "near": 0.0025,
+            "far": 1000,
+            "timeScale": 1,
+            "height": 0.05
           }
         }
       ],
@@ -119,7 +226,7 @@
         {
           "name": "skybox",
           "props": {
-            "backgroundColor": "000000",
+            "backgroundColor": 0,
             "equirectangularPath": "",
             "cubemapPath": "__$project$__/default-project/assets/skyboxsun25deg/",
             "backgroundType": 1,
@@ -190,10 +297,10 @@
               "z": 0
             },
             "rotation": {
-              "x": 0.24690793740359293,
-              "y": 0.28965548016032816,
-              "z": 0.07761295437009141,
-              "w": 0.9214729527089438
+              "x": 0.25051840407701237,
+              "y": 0.3359045608293154,
+              "z": 0.06502176141613844,
+              "w": 0.9056383526414472
             },
             "scale": {
               "x": 1,
@@ -207,21 +314,14 @@
           "props": {}
         },
         {
-          "name": "shadow",
-          "props": {
-            "cast": true,
-            "receive": true
-          }
-        },
-        {
           "name": "directional-light",
           "props": {
             "color": 16777215,
             "intensity": 1,
             "cameraFar": 2000,
             "castShadow": true,
-            "shadowMapResolution": 512,
-            "shadowBias": -0.00001,
+            "shadowMapResolution": 2048,
+            "shadowBias": -0.000005,
             "shadowRadius": 1,
             "useInCSM": true
           }
@@ -357,13 +457,6 @@
           }
         },
         {
-          "name": "loop-animation",
-          "props": {
-            "activeClipIndex": -1,
-            "hasAvatarAnimations": false
-          }
-        },
-        {
           "name": "collider",
           "props": {
             "bodyType": 1,
@@ -434,13 +527,6 @@
             "envMapSourceURL": "",
             "envMapIntensity": 1
           }
-        },
-        {
-          "name": "loop-animation",
-          "props": {
-            "activeClipIndex": -1,
-            "hasAvatarAnimations": false
-          }
         }
       ],
       "parent": "d32b1c4e-d08e-4fb0-9107-4c88a281ee71",
@@ -496,13 +582,6 @@
             "envMapSourceColor": 4095,
             "envMapSourceURL": "",
             "envMapIntensity": 1
-          }
-        },
-        {
-          "name": "loop-animation",
-          "props": {
-            "activeClipIndex": -1,
-            "hasAvatarAnimations": false
           }
         },
         {
