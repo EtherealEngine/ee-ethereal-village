@@ -116,8 +116,8 @@
                 "blendFunction": 16,
                 "kernelSize": 2,
                 "luminanceThreshold": 1,
-                "luminanceSmoothing": -0.24,
-                "intensity": 826.16
+                "luminanceSmoothing": 0.12,
+                "intensity": 1
               },
               "ToneMappingEffect": {
                 "isActive": false,
