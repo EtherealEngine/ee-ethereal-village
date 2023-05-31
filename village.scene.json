@@ -17,9 +17,9 @@
             },
             "rotation": {
               "x": 0,
-              "y": -0.043619387365335986,
+              "y": 0,
               "z": 0,
-              "w": 0.9990482215818578
+              "w": 1
             },
             "scale": {
               "x": 1,
@@ -49,7 +49,7 @@
             "bakeType": "Baked",
             "resolution": 2048,
             "refreshMode": "OnAwake",
-            "envMapOrigin": "__$project$__/ee-ethereal-village/village.envmap.png",
+            "envMapOrigin": "__$project$__/ee-ethereal-village/village.envmap.ktx2",
             "boxProjection": true
           }
         },
@@ -170,15 +170,15 @@
           "name": "transform",
           "props": {
             "position": {
-              "x": 0,
-              "y": 0,
-              "z": 0
+              "x": 54.857757463558144,
+              "y": 11.833625912329532,
+              "z": 59.12095288423174
             },
             "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
+              "x": -4.62310219165853e-7,
+              "y": 0.20047434800340463,
+              "z": 9.460185663152465e-8,
+              "w": 0.9796989516133959
             },
             "scale": {
               "x": 1,
@@ -188,7 +188,7 @@
           }
         },
         {
-          "name": "visible",
+          "name": "scene-preview-camera",
           "props": {}
         }
       ],
@@ -369,38 +369,6 @@
       "index": 4,
       "name": "New Spawn Point"
     },
-    "a64a050f-79c8-479b-bfd1-a56b60422ec0": {
-      "components": [
-        {
-          "name": "transform",
-          "props": {
-            "position": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
-            }
-          }
-        },
-        {
-          "name": "scene-preview-camera",
-          "props": {}
-        }
-      ],
-      "parent": "d32b1c4e-d08e-4fb0-9107-4c88a281ee71",
-      "index": 5,
-      "name": "entity-7"
-    },
     "a96c535f-e1ac-4643-8f0f-fbf48fed527f": {
       "components": [
         {
@@ -470,7 +438,7 @@
         }
       ],
       "parent": "d32b1c4e-d08e-4fb0-9107-4c88a281ee71",
-      "index": 6,
+      "index": 5,
       "name": "terrain"
     },
     "db15d8fb-ac74-4b65-8a08-a0fb9e5fc351": {
@@ -530,7 +498,7 @@
         }
       ],
       "parent": "d32b1c4e-d08e-4fb0-9107-4c88a281ee71",
-      "index": 7,
+      "index": 6,
       "name": "village"
     },
     "3021db37-17cb-4c6c-8001-1ebb0f9db45f": {
@@ -598,7 +566,7 @@
         }
       ],
       "parent": "d32b1c4e-d08e-4fb0-9107-4c88a281ee71",
-      "index": 8,
+      "index": 7,
       "name": "colliders"
     }
   },
