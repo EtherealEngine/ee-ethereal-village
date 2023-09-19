@@ -1,7 +1,7 @@
 {
   "name": "ee-ethereal-village",
   "version": "0.0.0",
-  "description": "",
+  "description": "'A medieval world showcasing advanced open world multiplayer features",
   "main": "",
   "etherealEngine": {
     "version": "1.2.0"
