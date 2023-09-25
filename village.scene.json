@@ -67,28 +67,6 @@
           "props": {
             "enabled": true,
             "effects": {
-              "SMAAEffect": {
-                "isActive": true,
-                "blendFunction": 13,
-                "preset": 1,
-                "edgeDetectionMode": 2,
-                "predicationMode": 0
-              },
-              "OutlineEffect": {
-                "isActive": true,
-                "blendFunction": 16,
-                "patternTexture": null,
-                "edgeStrength": 1,
-                "pulseSpeed": 0,
-                "visibleEdgeColor": 16777215,
-                "hiddenEdgeColor": 16777215,
-                "resolutionScale": 0.5,
-                "width": -1,
-                "height": -1,
-                "kernelSize": 0,
-                "blur": false,
-                "xRay": true
-              },
               "SSAOEffect": {
                 "isActive": false,
                 "blendFunction": 10,
@@ -103,6 +81,29 @@
                 "radius": 0.01,
                 "intensity": 2,
                 "fade": 0.05
+              },
+              "SSREffect": {
+                "isActive": false,
+                "distance": 10,
+                "thickness": 10,
+                "autoThickness": false,
+                "maxRoughness": 1,
+                "blend": 0.9,
+                "denoiseIterations": 1,
+                "denoiseKernel": 2,
+                "denoiseDiffuse": 10,
+                "denoiseSpecular": 10,
+                "depthPhi": 2,
+                "normalPhi": 50,
+                "roughnessPhi": 1,
+                "envBlur": 0.5,
+                "importanceSampling": true,
+                "directLightMultiplier": 1,
+                "steps": 20,
+                "refineSteps": 5,
+                "spp": 1,
+                "resolutionScale": 1,
+                "missedRays": false
               },
               "DepthOfFieldEffect": {
                 "isActive": false,
@@ -145,6 +146,68 @@
               },
               "LinearTosRGBEffect": {
                 "isActive": false
+              },
+              "SSGIEffect": {
+                "isActive": false,
+                "distance": 10,
+                "thickness": 10,
+                "autoThickness": false,
+                "maxRoughness": 1,
+                "blend": 0.9,
+                "denoiseIterations": 1,
+                "denoiseKernel": 2,
+                "denoiseDiffuse": 10,
+                "denoiseSpecular": 10,
+                "depthPhi": 2,
+                "normalPhi": 50,
+                "roughnessPhi": 1,
+                "envBlur": 0.5,
+                "importanceSampling": true,
+                "directLightMultiplier": 1,
+                "steps": 20,
+                "refineSteps": 5,
+                "spp": 1,
+                "resolutionScale": 1,
+                "missedRays": false
+              },
+              "TRAAEffect": {
+                "isActive": false,
+                "blend": 0.8,
+                "constantBlend": true,
+                "dilation": true,
+                "blockySampling": false,
+                "logTransform": false,
+                "depthDistance": 10,
+                "worldDistance": 5,
+                "neighborhoodClamping": true
+              },
+              "MotionBlurEffect": {
+                "isActive": false,
+                "intensity": 1,
+                "jitter": 1,
+                "samples": 16
+              },
+              "SMAAEffect": {
+                "isActive": true,
+                "blendFunction": 13,
+                "preset": 1,
+                "edgeDetectionMode": 2,
+                "predicationMode": 0
+              },
+              "OutlineEffect": {
+                "isActive": true,
+                "blendFunction": 16,
+                "patternTexture": null,
+                "edgeStrength": 1,
+                "pulseSpeed": 0,
+                "visibleEdgeColor": 16777215,
+                "hiddenEdgeColor": 16777215,
+                "resolutionScale": 0.5,
+                "width": -1,
+                "height": -1,
+                "kernelSize": 0,
+                "blur": false,
+                "xRay": true
               }
             }
           }
@@ -176,8 +239,8 @@
             },
             "rotation": {
               "x": -4.62310219165853e-7,
-              "y": 0.20047434800340463,
-              "z": 9.460185663152465e-8,
+              "y": 0.2004743480034046,
+              "z": 9.460185663152464e-8,
               "w": 0.9796989516133959
             },
             "scale": {
@@ -320,7 +383,6 @@
             "intensity": 1,
             "cameraFar": 2000,
             "castShadow": true,
-            "shadowMapResolution": 2048,
             "shadowBias": -0.000005,
             "shadowRadius": 1,
             "useInCSM": true
@@ -345,12 +407,12 @@
               "x": 0,
               "y": 0.9961946980917455,
               "z": 0,
-              "w": -0.08715574274765854
+              "w": -0.08715574274765853
             },
             "scale": {
-              "x": 0.9999999999999981,
+              "x": 0.9999999999999982,
               "y": 1,
-              "z": 0.9999999999999981
+              "z": 0.9999999999999982
             }
           }
         },
@@ -407,11 +469,25 @@
           "name": "gltf-model",
           "props": {
             "src": "__$project$__/ee-ethereal-village/assets/terrain.glb",
-            "resource": {
-              "src": "__$project$__/ee-ethereal-village/assets/terrain.glb"
-            },
             "generateBVH": true,
-            "avoidCameraOcclusion": false
+            "avoidCameraOcclusion": true
+          }
+        },
+        {
+          "name": "loop-animation",
+          "props": {
+            "hasAvatarAnimations": false,
+            "activeClipIndex": -1,
+            "animationPack": "",
+            "paused": false,
+            "time": 0,
+            "timeScale": 1,
+            "blendMode": 2500,
+            "loop": 2201,
+            "clampWhenFinished": false,
+            "zeroSlopeAtStart": true,
+            "zeroSlopeAtEnd": true,
+            "weight": 1
           }
         },
         {
@@ -421,6 +497,7 @@
             "envMapTextureType": "Equirectangular",
             "envMapSourceColor": 4095,
             "envMapSourceURL": "",
+            "envMapSourceEntityUUID": "",
             "envMapIntensity": 1
           }
         },
@@ -433,7 +510,8 @@
             "removeMesh": false,
             "collisionLayer": 1,
             "collisionMask": 7,
-            "restitution": 1
+            "restitution": 1,
+            "triggers": []
           }
         }
       ],
@@ -479,11 +557,25 @@
           "name": "gltf-model",
           "props": {
             "src": "__$project$__/ee-ethereal-village/assets/ethereal_village.glb",
-            "resource": {
-              "src": "__$project$__/ee-ethereal-village/assets/ethereal_village.glb"
-            },
             "generateBVH": true,
-            "avoidCameraOcclusion": false
+            "avoidCameraOcclusion": true
+          }
+        },
+        {
+          "name": "loop-animation",
+          "props": {
+            "hasAvatarAnimations": false,
+            "activeClipIndex": -1,
+            "animationPack": "",
+            "paused": false,
+            "time": 0,
+            "timeScale": 1,
+            "blendMode": 2500,
+            "loop": 2201,
+            "clampWhenFinished": false,
+            "zeroSlopeAtStart": true,
+            "zeroSlopeAtEnd": true,
+            "weight": 1
           }
         },
         {
@@ -493,6 +585,7 @@
             "envMapTextureType": "Equirectangular",
             "envMapSourceColor": 4095,
             "envMapSourceURL": "",
+            "envMapSourceEntityUUID": "",
             "envMapIntensity": 1
           }
         }
@@ -535,11 +628,25 @@
           "name": "gltf-model",
           "props": {
             "src": "__$project$__/ee-ethereal-village/assets/colliders.glb",
-            "resource": {
-              "src": "__$project$__/ee-ethereal-village/assets/colliders.glb"
-            },
-            "generateBVH": true,
+            "generateBVH": false,
             "avoidCameraOcclusion": false
+          }
+        },
+        {
+          "name": "loop-animation",
+          "props": {
+            "hasAvatarAnimations": false,
+            "activeClipIndex": -1,
+            "animationPack": "",
+            "paused": false,
+            "time": 0,
+            "timeScale": 1,
+            "blendMode": 2500,
+            "loop": 2201,
+            "clampWhenFinished": false,
+            "zeroSlopeAtStart": true,
+            "zeroSlopeAtEnd": true,
+            "weight": 1
           }
         },
         {
@@ -549,6 +656,7 @@
             "envMapTextureType": "Equirectangular",
             "envMapSourceColor": 4095,
             "envMapSourceURL": "",
+            "envMapSourceEntityUUID": "",
             "envMapIntensity": 1
           }
         },
@@ -561,7 +669,8 @@
             "removeMesh": false,
             "collisionLayer": 1,
             "collisionMask": 7,
-            "restitution": 1
+            "restitution": 1,
+            "triggers": []
           }
         }
       ],
